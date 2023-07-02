@@ -25,7 +25,7 @@ export default function Introduction() {
             Let&apos;s collaborate and create amazing works together!
           </p>
           <div>
-            <button className="bg-yellow-pastel px-9 py-3 rounded-full border border-black shadow-[1.8px_2px_0px_0_rgba(0,0,0)] text-lg font-semibold">
+            <button className="bg-brand-yellow-pastel px-9 py-3 rounded-full border border-black shadow-[1.8px_2px_0px_0_rgba(0,0,0)] text-lg font-semibold">
               My Project 🙌
             </button>
           </div>

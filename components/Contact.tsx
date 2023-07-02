@@ -5,11 +5,11 @@ import IconIg from "@/assets/images/IconIg";
 import Link from "next/link";
 export default function Contact() {
   return (
-    <div className="bg-whitist-pastel h-max">
+    <div className="bg-brand-whitist-pastel h-max">
       <div className="flex flex-col items-center py-10">
         <div className="mb-8">
           <p className="text-center">Get in touch with me</p>
-          <hr className="w-[200px] m-auto bg-blue-pastel  border-black shadow-[1.8px_1px_0px_0_rgba(0,0,0)]" />
+          <hr className="w-[200px] m-auto bg-brand-blue-pastel  border-black shadow-[1.8px_1px_0px_0_rgba(0,0,0)]" />
         </div>
         <div className="flex gap-10">
           <LinkContact

@@ -22,7 +22,7 @@ export default function About() {
               role. I thoroughly enjoy working closely with cross-functional
               teams that encompass technology, business, and design.
             </p>
-            <button className="bg-blue-pastel px-8 py-3 mt-5 rounded-full border border-black shadow-[1.8px_2px_0px_0_rgba(0,0,0)] text-lg font-semibold">
+            <button className="bg-brand-blue-pastel px-8 py-3 mt-5 rounded-full border border-black shadow-[1.8px_2px_0px_0_rgba(0,0,0)] text-lg font-semibold">
               Let&apos;s Collab 🚀
             </button>
           </div>

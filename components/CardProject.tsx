@@ -20,7 +20,7 @@ interface PropsCard {
 const CardProject = (props: PropsCard) => {
   const {
     children,
-    className = "bg-blue-pastel",
+    className = "bg-brand-blue-pastel",
     image,
     title,
     vendor,
@@ -43,12 +43,12 @@ const CardProject = (props: PropsCard) => {
       />
       <div className="group info opacity-0 relative z-30 text-white translate-y-2 duration-500 group-hover:opacity-100 group-hover:translate-y-0">
         <h1 className="text-lg leading-6 mb-3">{title}</h1>
-        <span className="block rounded-full bg-whitist-pastel px-2 py-0.5 text-xs text-slate-500 mb-1 border border-black shadow-[1px_2px_0px_0_rgba(0,0,0)]">
+        <span className="block rounded-full bg-brand-whitist-pastel px-2 py-0.5 text-xs text-slate-500 mb-1 border border-black shadow-[1px_2px_0px_0_rgba(0,0,0)]">
           {vendor ? vendor + ":" : ""}
           <span className="font-semibold">{client}</span>
         </span>
         <div className="block mb-1  ">{BuilderBadge(stack)}</div>
-        <span className="bg-red-pastel px-2 py-0.5 rounded-sm border border-black shadow-[1px_2px_0px_0_rgba(0,0,0)]">
+        <span className="bg-brand-red-pastel px-2 py-0.5 rounded-sm border border-black shadow-[1px_2px_0px_0_rgba(0,0,0)]">
           Internal
         </span>
       </div>
@@ -58,15 +58,39 @@ const CardProject = (props: PropsCard) => {
 
 export default CardProject;
 
+interface Color {
+  name: string;
+  value: string;
+}
+
+interface RecursiveKeyValuePair<K extends keyof any = string, V = string> {
+  [key: string]: V | RecursiveKeyValuePair<K, V>;
+}
+
 const BuilderBadge = (stacks: Array<string>) => {
-  // let onlyExtendColor = fullConfig.theme?.colors?.map((c:string)=>{})
+  let onlyExtendColor = fullConfig.theme?.colors?.brand as
+    | {
+        [key: string]: string | RecursiveKeyValuePair<string, string>;
+      }
+    | undefined;
+
+  const colorArray: Color[] = Object.entries(onlyExtendColor || {}).map(
+    ([name, value]) => ({
+      name,
+      value: typeof value === "string" ? value : "",
+    })
+  );
+
   return stacks?.map((data: string, index: number) => {
     return (
       <span
         key={`stack-${index}`}
-        className="whitespace-nowrap rounded px-2 py-0.5 mr-1 text-xs border border-black shadow-[1px_2px_0px_0_rgba(0,0,0)]"
+        className={`whitespace-nowrap rounded px-2 py-0.5 mr-1 text-xs border border-black shadow-[1px_2px_0px_0_rgba(0,0,0)] bg-brand-${
+          colorArray[index + 1].name
+        } text-black`}
       >
         {data}
+        {/* {JSON.stringify(onlyExtendColor)} */}
       </span>
     );
   });
