@@ -1,10 +1,12 @@
 import React from "react";
 import CardProject from "./CardProject";
 import Luna from "@/assets/images/luna.png";
+import Coma from "@/assets/images/COMA.png";
+import ATS from "@/assets/images/ATS.png";
 
 export default function Project() {
   return (
-    <div className="section-project bg-white min-h-screen">
+    <div className="section-project bg-white min-h-screen pb-10">
       <div className="mb-8">
         <p className="flex justify-center">My Recent Project</p>
         <hr className="w-[200px] m-auto bg-brand-blue-pastel  border-black shadow-[1.8px_1px_0px_0_rgba(0,0,0)]" />
@@ -20,17 +22,59 @@ export default function Project() {
           ></CardProject>
           <CardProject
             className="bg-brand-yellow-pastel"
-            image={Luna}
+            // image={Luna}
             title="Inspiro eProc"
             client="PT. Inspiro"
             stack={["ReactJs", "SASS", "Ant Design"]}
           ></CardProject>
           <CardProject
             className="bg-brand-red-pastel"
-            image={Luna}
-            title="LUNA (Life University Application) / e-Learning Application"
-            client="ATS Inspiro"
+            image={ATS}
+            title="ATS Inspiro"
+            client="PT. Inspiro"
             stack={["ReactJs", "SASS", "Bootstrap"]}
+          ></CardProject>
+          <CardProject
+            className="bg-brand-yellow-pastel"
+            image={Coma}
+            title="Competency Management System"
+            client="AHM"
+            vendor="PT. Inspiro"
+            stack={["Javascript", "JQuery", "CSS3"]}
+          ></CardProject>
+          <CardProject
+            className="bg-brand-pink-pastel"
+            title="Zurich eProc - Master Data VAT"
+            client="Zurich"
+            vendor="PT. Inspiro"
+            stack={["VueJS", "CSS3", "Bootstrap"]}
+          ></CardProject>
+          <CardProject
+            className="bg-brand-whitist-pastel"
+            title="Zurich ePV - Compensation"
+            client="Zurich"
+            vendor="PT. Inspiro"
+            stack={["AngularJS", "CSS3"]}
+          ></CardProject>
+          <CardProject
+            className="bg-brand-red-pastel"
+            title="Inspiro Accounting"
+            client="Zurich"
+            vendor="PT. Inspiro"
+            stack={["ReactJs", "CSS3", "Bootstrap"]}
+          ></CardProject>
+          <CardProject
+            title="Enhancement SharePoint"
+            client="JOB Pertamina-Medco E&P Tomori Sulawesi"
+            vendor="PT. Inspiro"
+            stack={[".Net MVC", "JQuery", "Bootstrap", "CSS3"]}
+          ></CardProject>
+          <CardProject
+            className="bg-brand-yellow-pastel"
+            title="eLearning"
+            client=" Perusahaan Perkebunan London Sumatra Indonesia"
+            vendor="PT. Inspiro"
+            stack={[".Net", "JQuery", "Sharepoint", "CSS3"]}
           ></CardProject>
         </div>
       </div>
