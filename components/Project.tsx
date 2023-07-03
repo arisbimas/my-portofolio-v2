@@ -3,6 +3,7 @@ import CardProject from "./CardProject";
 import Luna from "@/assets/images/luna.png";
 import Coma from "@/assets/images/COMA.png";
 import ATS from "@/assets/images/ATS.png";
+import Notes from "@/assets/images/note.png";
 
 export default function Project() {
   return (
@@ -22,7 +23,7 @@ export default function Project() {
           ></CardProject>
           <CardProject
             className="bg-brand-yellow-pastel"
-            // image={Luna}
+            image={Luna}
             title="Inspiro eProc"
             client="PT. Inspiro"
             stack={["ReactJs", "SASS", "Ant Design"]}
@@ -33,6 +34,13 @@ export default function Project() {
             title="ATS Inspiro"
             client="PT. Inspiro"
             stack={["ReactJs", "SASS", "Bootstrap"]}
+          ></CardProject>
+          <CardProject
+            image={Notes}
+            title="Notes App"
+            // vendor="PT. Inspiro"
+            vendor="-"
+            stack={["ReactJs", "CSS3", "Bootstrap"]}
           ></CardProject>
           <CardProject
             className="bg-brand-yellow-pastel"

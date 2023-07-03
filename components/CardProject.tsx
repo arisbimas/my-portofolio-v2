@@ -13,7 +13,7 @@ interface PropsCard {
   image?: any;
   title: string;
   vendor?: string;
-  client: string;
+  client?: string;
   stack?: Array<string>;
 }
 

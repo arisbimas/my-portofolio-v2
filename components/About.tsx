@@ -5,7 +5,7 @@ import Avatar2 from "@/assets/images/avatar-4.png";
 
 export default function About() {
   return (
-    <div className="section-about min-h-screen bg-white">
+    <div className="section-about min-h-screen bg-white pb-10 lg:pb-0">
       <div className="top-[-1px] relative">
         <Image src={Wave1} alt="wave" className="w-full h-full object-cover" />
       </div>
