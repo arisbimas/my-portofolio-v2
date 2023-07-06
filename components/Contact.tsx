@@ -11,7 +11,7 @@ export default function Contact() {
           <p className="text-center">Get in touch with me</p>
           <hr className="w-[200px] m-auto bg-brand-blue-pastel  border-black shadow-[1.8px_1px_0px_0_rgba(0,0,0)]" />
         </div>
-        <div className="flex gap-10">
+        <div className="flex gap-5 md:gap-10">
           <LinkContact
             href="https://github.com/arisbimas/"
             icon={<IconGithub />}
@@ -45,7 +45,7 @@ const LinkContact = (props: LinkContactProps) => {
     <Link href={props.href} target="_blank">
       <div className="flex flex-col items-center">
         {props.icon}
-        {props.text}
+        {/* {props.text} */}
       </div>
     </Link>
   );

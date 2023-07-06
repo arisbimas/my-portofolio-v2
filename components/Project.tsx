@@ -36,6 +36,7 @@ export default function Project() {
             stack={["ReactJs", "SASS", "Bootstrap"]}
           ></CardProject>
           <CardProject
+            className="bg-brand-yellow-pastel"
             image={Notes}
             title="Notes App"
             // vendor="PT. Inspiro"
@@ -43,7 +44,7 @@ export default function Project() {
             stack={["ReactJs", "CSS3", "Bootstrap"]}
           ></CardProject>
           <CardProject
-            className="bg-brand-yellow-pastel"
+            className="bg-brand-pink-pastel"
             image={Coma}
             title="Competency Management System"
             client="AHM"
@@ -51,38 +52,45 @@ export default function Project() {
             stack={["Javascript", "JQuery", "CSS3"]}
           ></CardProject>
           <CardProject
-            className="bg-brand-pink-pastel"
+            className="bg-brand-whitist-pastel"
             title="Zurich eProc - Master Data VAT"
             client="Zurich"
             vendor="PT. Inspiro"
             stack={["VueJS", "CSS3", "Bootstrap"]}
           ></CardProject>
           <CardProject
-            className="bg-brand-whitist-pastel"
+            className="bg-brand-red-pastel"
             title="Zurich ePV - Compensation"
             client="Zurich"
             vendor="PT. Inspiro"
             stack={["AngularJS", "CSS3"]}
           ></CardProject>
           <CardProject
-            className="bg-brand-red-pastel"
             title="Inspiro Accounting"
             client="Zurich"
             vendor="PT. Inspiro"
             stack={["ReactJs", "CSS3", "Bootstrap"]}
           ></CardProject>
           <CardProject
+            className="bg-brand-yellow-pastel"
             title="Enhancement SharePoint"
             client="JOB Pertamina-Medco E&P Tomori Sulawesi"
             vendor="PT. Inspiro"
             stack={[".Net MVC", "JQuery", "Bootstrap", "CSS3"]}
           ></CardProject>
           <CardProject
-            className="bg-brand-yellow-pastel"
+            className="bg-brand-whitist-pastel"
             title="eLearning"
             client=" Perusahaan Perkebunan London Sumatra Indonesia"
             vendor="PT. Inspiro"
             stack={[".Net", "JQuery", "Sharepoint", "CSS3"]}
+          ></CardProject>
+          <CardProject
+            className="bg-brand-yellow-pastel"
+            title="Sistem Infromasi Perpustakaan"
+            client="SMA Negeri 15 Kota Bekas"
+            vendor="-"
+            stack={["PHP", "JQuery", "CSS3"]}
           ></CardProject>
         </div>
       </div>
