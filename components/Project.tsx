@@ -41,7 +41,9 @@ export default function Project() {
             title="Notes App"
             // vendor="PT. Inspiro"
             vendor="-"
-            stack={["ReactJs", "CSS3", "Bootstrap"]}
+            stack={["ReactJs", "Firebase", "CSS3", "Bootstrap"]}
+            expose={true}
+            link="https://react-notesapp.vercel.app/"
           ></CardProject>
           <CardProject
             className="bg-brand-pink-pastel"

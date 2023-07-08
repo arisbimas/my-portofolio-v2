@@ -1,5 +1,7 @@
 import React, { ReactNode } from "react";
 import DefaultIcon from "@/assets/images/iconproject.png";
+import ExposeLink from "@/assets/images/arrow-up-right-circle.svg";
+
 import Image, { StaticImageData } from "next/image";
 
 import resolveConfig from "tailwindcss/resolveConfig";
@@ -15,6 +17,8 @@ interface PropsCard {
   vendor?: string;
   client?: string;
   stack?: Array<string>;
+  expose?: boolean;
+  link?: string;
 }
 
 const CardProject = (props: PropsCard) => {
@@ -26,6 +30,8 @@ const CardProject = (props: PropsCard) => {
     vendor,
     client,
     stack = [],
+    expose = false,
+    link,
   } = props;
   return (
     <div
@@ -48,9 +54,22 @@ const CardProject = (props: PropsCard) => {
           <span className="font-semibold">{client}</span>
         </span>
         <div className="block mb-1  ">{BuilderBadge(stack)}</div>
-        <span className="bg-brand-red-pastel px-2 py-0.5 rounded-sm border border-black shadow-[1px_2px_0px_0_rgba(0,0,0)]">
-          Internal
-        </span>
+        {expose ? (
+          <a
+            className="bg-brand-red-pastel px-2 py-0.5 rounded-sm border border-black shadow-[1px_2px_0px_0_rgba(0,0,0)]"
+            href={link}
+            target="_blank"
+          >
+            <div className="inline-flex gap-1">
+              <span>External</span>
+              <Image src={ExposeLink} alt="link" width={15} height={12} />
+            </div>
+          </a>
+        ) : (
+          <span className="bg-brand-red-pastel px-2 py-0.5 rounded-sm border border-black shadow-[1px_2px_0px_0_rgba(0,0,0)]">
+            Internal
+          </span>
+        )}
       </div>
     </div>
   );
