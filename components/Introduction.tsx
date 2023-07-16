@@ -12,7 +12,7 @@ export default function Introduction() {
       ref={homeRef}
     >
       <div className="flex flex-col-reverse lg:flex-row items-start justify-start text-start lg:text-start ">
-        <div className="m-auto md:w-6/12 w-8/12 aspect-square lg:mb-0 mt-10">
+        <div className="m-auto md:w-6/12 w-8/12 aspect-square lg:mb-0 mt-10 cursor-pointer">
           <Image
             alt="avatar"
             src={Avatar}
