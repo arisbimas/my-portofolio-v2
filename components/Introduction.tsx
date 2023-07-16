@@ -1,9 +1,16 @@
+"use client";
 import Avatar from "@/assets/images/avatar.png";
+import MenuContext from "@/context/MenuContext";
 import Image from "next/image";
+import { useContext } from "react";
 
 export default function Introduction() {
+  const { homeRef } = useContext(MenuContext);
   return (
-    <div className="section-home min-h-screen lg:w-9/12 md:w-10/12 w-11/12 pt-4 m-auto">
+    <div
+      className="section-home min-h-screen lg:w-9/12 md:w-10/12 w-11/12 pt-4 m-auto"
+      ref={homeRef}
+    >
       <div className="flex flex-col-reverse lg:flex-row items-start justify-start text-start lg:text-start ">
         <div className="m-auto md:w-6/12 w-8/12 aspect-square lg:mb-0 mt-10">
           <Image
@@ -25,7 +32,7 @@ export default function Introduction() {
             Let&apos;s collaborate and create amazing works together!
           </p>
           <div>
-            <button className="bg-brand-yellow-pastel px-9 py-3 rounded-full border border-black shadow-[1.8px_2px_0px_0_rgba(0,0,0)] text-lg font-semibold">
+            <button className="bg-brand-yellow-pastel px-9 py-3 rounded-full border border-black shadow-[1.8px_2px_0px_0_rgba(0,0,0)] text-lg font-semibold hover:ease-out hover:duration-500 hover:translate-y-1">
               My Project 🙌
             </button>
           </div>

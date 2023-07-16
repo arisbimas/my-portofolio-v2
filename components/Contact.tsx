@@ -1,11 +1,14 @@
-import React, { ReactNode } from "react";
+"use client";
+import React, { ReactNode, useContext } from "react";
 import IconLinkined from "@/assets/images/IconLinkined";
 import IconGithub from "@/assets/images/IconGithub";
 import IconIg from "@/assets/images/IconIg";
 import Link from "next/link";
+import MenuContext from "@/context/MenuContext";
 export default function Contact() {
+  const { contactRef } = useContext(MenuContext);
   return (
-    <div className="bg-brand-whitist-pastel h-max">
+    <div className="bg-brand-whitist-pastel h-max" ref={contactRef}>
       <div className="flex flex-col items-center py-10">
         <div className="mb-8">
           <p className="text-center">Get in touch with me</p>

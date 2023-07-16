@@ -1,13 +1,20 @@
-import React from "react";
+"use client";
+import React, { useContext } from "react";
 import CardProject from "./CardProject";
 import Luna from "@/assets/images/luna.png";
 import Coma from "@/assets/images/COMA.png";
 import ATS from "@/assets/images/ATS.png";
 import Notes from "@/assets/images/note.png";
+import MenuContext from "@/context/MenuContext";
 
 export default function Project() {
+  const { projectRef } = useContext(MenuContext);
+
   return (
-    <div className="section-project bg-white min-h-screen pb-10">
+    <div
+      className="section-project bg-white min-h-screen pb-10"
+      ref={projectRef}
+    >
       <div className="mb-8">
         <p className="flex justify-center">My Recent Project</p>
         <hr className="w-[200px] m-auto bg-brand-blue-pastel  border-black shadow-[1.8px_1px_0px_0_rgba(0,0,0)]" />
