@@ -16,7 +16,7 @@ export const TopBar: React.FC<TopBarProps> = ({ handleMenuClick }) => {
 
   return (
     <header className="bg-brand-cream-pastel mx-auto h-24 inset-x-0 top-0 z-50 fixed flex items-center justify-center">
-      <nav className="lg:w-9/12 w-11/12 flex justify-between m-auto">
+      <nav className="lg:w-9/12 w-10/12 flex justify-between m-auto">
         <div
           className="logo"
           onClick={() => handleMenuClick(menuRef?.homeRef?.current)}

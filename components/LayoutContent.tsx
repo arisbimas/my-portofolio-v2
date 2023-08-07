@@ -3,34 +3,14 @@ import React from "react";
 import { TopBar } from "@/components/Topbar";
 import { useRef, useState } from "react";
 import MenuContext from "@/context/MenuContext";
+import useTopBarHook from "@/hooks/useTopBarHook";
 
 function LayoutContent({ children }: { children: React.ReactNode }) {
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
   const projectRef = useRef(null);
   const contactRef = useRef(null);
-  const [prevRef, setPrevRef] = useState(null);
-
-  const handleMenuClick = (ref: any) => {
-    const top = ref.offsetTop - 96;
-    if (prevRef !== ref) {
-      setPrevRef(ref);
-      window.scrollTo({
-        top: top,
-        left: 0,
-        behavior: "smooth",
-      });
-    } else {
-      if (top !== window.scrollY) {
-        setPrevRef(ref);
-        window.scrollTo({
-          top: top,
-          left: 0,
-          behavior: "smooth",
-        });
-      }
-    }
-  };
+  const { handleMenuClick } = useTopBarHook();
 
   return (
     <MenuContext.Provider value={{ homeRef, aboutRef, projectRef, contactRef }}>
