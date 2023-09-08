@@ -5,6 +5,7 @@ import Luna from "@/assets/images/luna.png";
 import Coma from "@/assets/images/COMA.png";
 import ATS from "@/assets/images/ATS.png";
 import Notes from "@/assets/images/note.png";
+import InspiroEProc from "@/assets/images/inspiro-eproc.png";
 import MenuContext from "@/context/MenuContext";
 
 export default function Project() {
@@ -30,7 +31,7 @@ export default function Project() {
           ></CardProject>
           <CardProject
             className="bg-brand-yellow-pastel"
-            image={Luna}
+            image={InspiroEProc}
             title="Inspiro eProc"
             client="PT. Inspiro"
             stack={["ReactJs", "SASS", "Ant Design"]}
@@ -70,8 +71,7 @@ export default function Project() {
           <CardProject
             className="bg-brand-red-pastel"
             title="Zurich ePV - Compensation"
-            client="Zurich"
-            vendor="PT. Inspiro"
+            client="PT. Inspiro"
             stack={["AngularJS", "CSS3"]}
           ></CardProject>
           <CardProject
