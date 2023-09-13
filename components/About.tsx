@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React, { useContext } from "react";
 import Wave1 from "@/assets/images/wave-1.svg";
-import Avatar2 from "@/assets/images/avatar-4.png";
+import Avatar2 from "@/assets/images/avatar-5.png";
 import MenuContext from "@/context/MenuContext";
 import useTopBarHook from "@/hooks/useTopBarHook";
 
