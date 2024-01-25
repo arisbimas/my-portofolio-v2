@@ -5,7 +5,8 @@ import Luna from "@/assets/images/luna.png";
 import Coma from "@/assets/images/COMA.png";
 import ATS from "@/assets/images/ATS.png";
 import Notes from "@/assets/images/note.png";
-import InspiroEProc from "@/assets/images/inspiro-eproc.png";
+import InspiroEProc from "@/assets/images/inspiro-eproc-project.png";
+import QuickAcqWebsite from "@/assets/images/quickacq-website.png";
 import MenuContext from "@/context/MenuContext";
 
 export default function Project() {
@@ -23,18 +24,27 @@ export default function Project() {
       <div className="lg:w-9/12 md:w-10/12 w-11/12 mx-auto ">
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 mt-16 text-white">
           <CardProject
+            className="bg-brand-yellow-pastel"
+            image={InspiroEProc}
+            title="QuickAcq e-Procurement Web Application"
+            client="PT. Inspiro"
+            stack={["ReactJs", "SASS", "Ant Design"]}
+          ></CardProject>
+          <CardProject
+            className="bg-brand-yellow-pastel"
+            image={QuickAcqWebsite}
+            title="QuickAcq e-Procurement Website"
+            client="PT. Inspiro"
+            stack={["ReactJs", "Tailwind", "Vite"]}
+            expose={true}
+            link="https://quickacq.com/"
+          ></CardProject>
+          <CardProject
             image={Luna}
             title="LUNA (Life University Application) / e-Learning Application"
             vendor="PT. Inspiro"
             client="Sinarmas MSIG"
             stack={["ReactJs", "SASS", "Bootstrap"]}
-          ></CardProject>
-          <CardProject
-            className="bg-brand-yellow-pastel"
-            image={InspiroEProc}
-            title="Inspiro eProc"
-            client="PT. Inspiro"
-            stack={["ReactJs", "SASS", "Ant Design"]}
           ></CardProject>
           <CardProject
             className="bg-brand-red-pastel"
@@ -98,7 +108,7 @@ export default function Project() {
             className="bg-brand-yellow-pastel"
             title="Sistem Infromasi Perpustakaan"
             client="SMA Negeri 15 Kota Bekas"
-            vendor="-"
+            vendor="Internship"
             stack={["PHP", "JQuery", "CSS3"]}
           ></CardProject>
         </div>
