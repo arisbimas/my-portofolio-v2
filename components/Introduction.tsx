@@ -1,11 +1,14 @@
 "use client";
 import Avatar from "@/assets/images/avatar.png";
 import MenuContext from "@/context/MenuContext";
+import useTopBarHook from "@/hooks/useTopBarHook";
 import Image from "next/image";
 import { useContext } from "react";
 
 export default function Introduction() {
-  const { homeRef } = useContext(MenuContext);
+  const { homeRef, projectRef } = useContext(MenuContext);
+  const { handleMenuClick } = useTopBarHook();
+
   return (
     <div
       className="section-home min-h-screen lg:w-9/12 md:w-10/12 w-11/12 pt-4 m-auto"
@@ -32,7 +35,10 @@ export default function Introduction() {
             Let&apos;s collaborate and create amazing works together!
           </p>
           <div>
-            <button className="bg-brand-yellow-pastel px-9 py-3 rounded-full border border-black shadow-[1.8px_2px_0px_0_rgba(0,0,0)] text-lg font-semibold hover:ease-out hover:duration-500 hover:translate-y-1">
+            <button
+              className="bg-brand-yellow-pastel px-9 py-3 rounded-full border border-black shadow-[1.8px_2px_0px_0_rgba(0,0,0)] text-lg font-semibold hover:ease-out hover:duration-500 hover:translate-y-1"
+              onClick={() => handleMenuClick(projectRef?.current)}
+            >
               My Project 🙌
             </button>
           </div>

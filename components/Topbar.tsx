@@ -23,7 +23,7 @@ export const TopBar: React.FC<TopBarProps> = ({ handleMenuClick }) => {
         >
           <Image src={Logo} alt="logo" unoptimized={true} />
         </div>
-        <div className="flex gap-x-2 md:gap-x-6 items-center text-zinc-700">
+        <div className="flex gap-x-1 md:gap-x-6 items-center text-zinc-700">
           <a
             // key={item.name}
             // href={item.href}

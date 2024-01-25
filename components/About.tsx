@@ -2,11 +2,14 @@
 import Image from "next/image";
 import React, { useContext } from "react";
 import Wave1 from "@/assets/images/wave-1.svg";
-import Avatar2 from "@/assets/images/avatar-4.png";
+import Avatar2 from "@/assets/images/avatar-7.png";
 import MenuContext from "@/context/MenuContext";
+import useTopBarHook from "@/hooks/useTopBarHook";
 
 export default function About() {
-  const { aboutRef } = useContext(MenuContext);
+  const { aboutRef, contactRef } = useContext(MenuContext);
+  const { handleMenuClick } = useTopBarHook();
+
   return (
     <div
       className="section-about min-h-screen bg-white pb-10 lg:pb-0"
@@ -28,7 +31,10 @@ export default function About() {
               role. I thoroughly enjoy working closely with cross-functional
               teams that encompass technology, business, and design.
             </p>
-            <button className="bg-brand-blue-pastel px-8 py-3 mt-5 rounded-full border border-black shadow-[1.8px_2px_0px_0_rgba(0,0,0)] text-lg font-semibold hover:ease-out hover:duration-500 hover:translate-y-1">
+            <button
+              className="bg-brand-blue-pastel px-8 py-3 mt-5 rounded-full border border-black shadow-[1.8px_2px_0px_0_rgba(0,0,0)] text-lg font-semibold hover:ease-out hover:duration-500 hover:translate-y-1"
+              onClick={() => handleMenuClick(contactRef?.current)}
+            >
               Let&apos;s Collab 🚀
             </button>
           </div>
