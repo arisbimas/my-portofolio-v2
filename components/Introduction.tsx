@@ -20,8 +20,8 @@ export default function Introduction() {
             alt="avatar"
             src={Avatar}
             className="w-full h-full object-contain"
-            // width={300}
-            // height={300}
+          // width={300}
+          // height={300}
           />
         </div>
         <div className="flex flex-col self-center lg:w-6/12 lg:text-right text-center">
@@ -36,7 +36,7 @@ export default function Introduction() {
           </p>
           <div>
             <button
-              className="bg-brand-yellow-pastel px-9 py-3 rounded-full border border-black shadow-[1.8px_2px_0px_0_rgba(0,0,0)] text-lg font-semibold hover:ease-out hover:duration-500 hover:translate-y-1"
+              className="bg-brand-red-pastel px-9 py-3 rounded-full border border-black shadow-[1.8px_2px_0px_0_rgba(0,0,0)] text-lg font-semibold hover:ease-out hover:duration-500 hover:translate-y-1"
               onClick={() => handleMenuClick(projectRef?.current)}
             >
               My Project 🙌

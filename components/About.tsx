@@ -43,8 +43,8 @@ export default function About() {
               src={Avatar2}
               alt="avatar"
               className="w-full h-auto object-contain"
-              // width={300}
-              // height={300}
+            // width={300}
+            // height={300}
             />
           </div>
         </div>
