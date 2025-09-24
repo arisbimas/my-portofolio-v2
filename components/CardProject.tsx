@@ -47,13 +47,14 @@ const CardProject = (props: PropsCard) => {
           }`}
       />
       <div className="group info  relative z-30 text-white duration-500 opacity-100 translate-y-0">
-        <h1 className="text-lg leading-6 mb-3">{title}</h1>
-        <span className="rounded-full bg-brand-whitist-pastel px-2 py-0.5 text-xs text-slate-500 mb-1 border border-black shadow-[1px_2px_0px_0_rgba(0,0,0)]">
+        <h1 className="text-lg leading-6">{title}</h1>
+        <p className="text-xs mb-2 text-gray-300">{client}</p>
+        {/* <span className="rounded-full bg-brand-whitist-pastel px-2 py-0.5 text-xs text-slate-500 mb-1 border border-black shadow-[1px_2px_0px_0_rgba(0,0,0)]">
           {vendor ? vendor + ":" : ""}
           <span className="font-semibold">{client}</span>
-        </span>
-        <div className="block mb-1  ">{BuilderBadge(stack)}</div>
-        {expose ? (
+        </span> */}
+        <div className="flex gap-1 flex-wrap mb-1">{BuilderBadge(stack)}</div>
+        {/* {expose ? (
           <a
             className="bg-brand-red-pastel px-2 py-0.5 rounded-sm border border-black shadow-[1px_2px_0px_0_rgba(0,0,0)]"
             href={link}
@@ -68,7 +69,7 @@ const CardProject = (props: PropsCard) => {
           <span className="bg-brand-red-pastel px-2 py-0.5 rounded-sm border border-black shadow-[1px_2px_0px_0_rgba(0,0,0)]">
             Internal
           </span>
-        )}
+        )} */}
       </div>
     </div>
   );

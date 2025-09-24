@@ -15,7 +15,7 @@ export const TopBar: React.FC<TopBarProps> = ({ handleMenuClick }) => {
   const menuRef = useContext(MenuContext);
 
   const handleDownloadResume = () => {
-    window.open("https://drive.google.com/file/d/14_-z4EE-kFDlkHBfTy-rje0r7mhipUnk/view?usp=drive_link", "_blank");
+    window.open("https://drive.google.com/file/d/1et0sW7En1OSjd_BrriSxf99djCMd0w5k/view?usp=sharing", "_blank");
   }
 
   return (

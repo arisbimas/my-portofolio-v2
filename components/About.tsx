@@ -22,11 +22,7 @@ export default function About() {
         <div className="flex flex-col-reverse lg:flex-row md:text-start text-center items-center gap-3 md:gap-14">
           <div>
             <p>
-              I am a seasoned web developer with over 4 years of experience in crafting dynamic and visually
-              appealing web applications. With a foundation in freelance software development during my university
-              years, I later formalized my expertise by earning a Bachelor`s degree in Informatics Engineering from STMIK
-              Bani Saleh. Since then, I have been dedicated to advancing my career as a front-end web developer,
-              thriving in collaborative efforts with cross-functional teams across technology, business, and design.
+              I am an experienced front-end web developer with over five years experience in creating dynamic and visually appealing web applications. I started out in freelance software development during my university years and later formalised my expertise by earning a Bachelor`s degree in Informatics Engineering from STMIK Bani Saleh. Since then, I have been dedicated to advancing my career as a front-end web developer and have thrived in collaborative efforts with cross-functional teams from the technology, business and design sectors.
             </p>
             <button
               className="bg-brand-blue-pastel px-8 py-3 mt-5 rounded-full border border-black shadow-[1.8px_2px_0px_0_rgba(0,0,0)] text-lg font-semibold hover:ease-out hover:duration-500 hover:translate-y-1"

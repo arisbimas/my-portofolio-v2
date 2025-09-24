@@ -12,6 +12,7 @@ module.exports = {
           'red-pastel': '#FF6961',
           'yellow-pastel': '#F7CB45',
           'blue-pastel': '#9BB7D4',
+          'green-pastel': '#8CC0A2',
           "pink-pastel": '#FF91E8',
           'cream-pastel': '#F9F5F2',
           'whitist-pastel': '#F2F7F5'
