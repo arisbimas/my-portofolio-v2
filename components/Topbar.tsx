@@ -14,7 +14,7 @@ interface TopBarProps {
 export const TopBar: React.FC<TopBarProps> = ({ handleMenuClick }) => {
   const menuRef = useContext(MenuContext);
 
-  const handleDownloadResume = () => {
+  const handleDownloadCV = () => {
     window.open("https://drive.google.com/file/d/1et0sW7En1OSjd_BrriSxf99djCMd0w5k/view?usp=sharing", "_blank");
   }
 
@@ -56,9 +56,9 @@ export const TopBar: React.FC<TopBarProps> = ({ handleMenuClick }) => {
             // key={item.name}
             // href={item.href}
             className={"flex gap-1 items-center px-3 py-1 border rounded-md text-sm md:text-lg font-semibold md:font-medium cursor-pointer bg-[#F8CB46] border-black shadow-[1.8px_2px_0px_0_rgba(0,0,0)] hover:ease-out hover:duration-500 hover:translate-y-1"}
-            onClick={handleDownloadResume}
+            onClick={handleDownloadCV}
           >
-            CV Resume
+            Download CV
           </a>
         </div>
       </nav>
