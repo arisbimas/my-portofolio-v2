@@ -42,7 +42,7 @@ export const TopBar: React.FC<TopBarProps> = ({ handleMenuClick }) => {
             className={anchorStyle}
             onClick={() => handleMenuClick(menuRef?.projectRef?.current)}
           >
-            My Work
+            My Works
           </a>
           <a
             // key={item.name}
