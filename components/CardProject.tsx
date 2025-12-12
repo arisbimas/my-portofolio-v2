@@ -101,11 +101,12 @@ const BuilderBadge = (stacks: Array<string>) => {
   );
 
   return stacks?.map((data: string, index: number) => {
-    const randomColor = Math.floor(Math.random() * colorArray?.length - 1) + 1;
+    // Use deterministic color selection based on index to avoid hydration mismatch
+    const colorIndex = index % colorArray?.length;
     return (
       <span
         key={`stack-${index}`}
-        className={`whitespace-nowrap rounded px-2 py-0.5 mr-1 text-xs border border-black shadow-[1px_2px_0px_0_rgba(0,0,0)] text-black bg-brand-${colorArray?.[randomColor].name}`}
+        className={`whitespace-nowrap rounded px-2 py-0.5 mr-1 text-xs border border-black shadow-[1px_2px_0px_0_rgba(0,0,0)] text-black bg-brand-${colorArray?.[colorIndex]?.name}`}
       >
         {data}
       </span>
