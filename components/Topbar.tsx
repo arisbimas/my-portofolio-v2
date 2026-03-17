@@ -15,7 +15,8 @@ export const TopBar: React.FC<TopBarProps> = ({ handleMenuClick }) => {
   const menuRef = useContext(MenuContext);
 
   const handleDownloadCV = () => {
-    window.open("https://drive.google.com/file/d/1KLutcMecpEGkDZ8YgRNJSqFw6BftXvQR/view", "_blank");
+    const cvLink = process.env.NEXT_PUBLIC_CV_LINK;
+    window.open(cvLink, "_blank");
   }
 
   return (
