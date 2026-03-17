@@ -24,6 +24,21 @@ export default function Project() {
       <div className="lg:w-9/12 md:w-10/12 w-11/12 mx-auto ">
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 mt-16 text-white">
           <CardProject
+            className="bg-brand-blue-pastel"
+            title="Workflow Management System Web Application"
+            client="Produk untuk perusahaan IT Consultant"
+            // client="PT. Inspiro"
+            stack={["ReactJs", "SASS", "Ant Design", "Vite"]}
+          ></CardProject>
+          <CardProject
+            className="bg-brand-pink-pastel"
+            title="Workflow Management System Website"
+            client="Produk untuk perusahaan IT Consultant"
+            // client="PT. Inspiro"
+            stack={["ReactJs", "Tailwind", "Vite"]}
+            link="https://quickflow.id/"
+          ></CardProject>
+          <CardProject
             className="bg-brand-green-pastel"
             title="Greenhouse Management System"
             client="Produk untuk perusahaan IT Consultant"

@@ -6,6 +6,7 @@ import Image, { StaticImageData } from "next/image";
 
 import resolveConfig from "tailwindcss/resolveConfig";
 import tailwindConfig from "@/tailwind.config";
+import { ExternalLink } from "lucide-react";
 
 const fullConfig = resolveConfig(tailwindConfig);
 
@@ -23,7 +24,6 @@ interface PropsCard {
 
 const CardProject = (props: PropsCard) => {
   const {
-    children,
     className = "bg-brand-blue-pastel",
     image,
     title,
@@ -33,11 +33,19 @@ const CardProject = (props: PropsCard) => {
     expose = false,
     link,
   } = props;
+
+  const handleClick = () => {
+    if (link) {
+      window.open(link, "_blank");
+    }
+  };
+
   return (
     <div
-      className={`group w-full h-[280px] rounded-md border border-black shadow-[6px_5px_0px_0_rgba(0,0,0)] p-5 cursor-pointer relative flex items-end ease-out duration-500 before:contents-[""] before:absolute before:left-0 before:top-0 before:block before:w-full before:h-full before:rounded-md before:bg-black before:bg-opacity-60 before:z-10 before:duration-500 hover:translate-y-2 before:opacity-100 ${className}`}
+      className={`group w-full h-[280px] rounded-md border border-black shadow-[6px_5px_0px_0_rgba(0,0,0)] p-5 relative flex items-end ease-out duration-500 before:contents-[""] before:absolute before:left-0 before:top-0 before:block before:w-full before:h-full before:rounded-md before:bg-black before:bg-opacity-60 before:z-10 before:duration-500 hover:translate-y-2 before:opacity-100 ${link ? "cursor-pointer" : ""} ${className}`}
+      onClick={handleClick}
     >
-      {children}
+      {link && <ExternalLink size={15} className="absolute top-2 right-2 z-30 text-white" />}
       <Image
         src={image || DefaultIcon}
         alt="poject"
