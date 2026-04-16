@@ -3,12 +3,173 @@ import Image from "next/image";
 import React, { useContext } from "react";
 import Wave1 from "@/assets/images/wave-1.svg";
 import Avatar2 from "@/assets/images/avatar-7.png";
+import JotaiIcon from "@/assets/images/jotai-icon.png";
 import MenuContext from "@/context/MenuContext";
 import useTopBarHook from "@/hooks/useTopBarHook";
+import StackIcon from "tech-stack-icons";
 
 export default function About() {
   const { aboutRef, contactRef } = useContext(MenuContext);
   const { handleMenuClick } = useTopBarHook();
+
+  const iconModuleFederation: any = () => (
+    <span>
+      <svg width="43" height="40" xmlns="http://www.w3.org/2000/svg" fill="none">
+        <g>
+          <title>Layer 1</title>
+          <path id="svg_1" fill="#108CB9" d="m21.5155,0.50171l4.5786,2.52282l-0.1483,0.26791l-4.5786,-2.52283l0.1483,-0.2679z" clip-rule="evenodd" fill-rule="evenodd" />
+          <path id="svg_2" fill="#108CB9" d="m21.4553,1.22418c0.3388,0 0.6135,-0.27404 0.6135,-0.61209c0,-0.33805 -0.2747,-0.61209 -0.6135,-0.61209c-0.3388,0 -0.6135,0.27404 -0.6135,0.61209c0,0.33805 0.2747,0.61209 0.6135,0.61209z" />
+          <path id="svg_3" fill="#108CB9" d="m26.0197,3.77056c0.3388,0 0.6135,-0.27404 0.6135,-0.61208c0,-0.33805 -0.2747,-0.61209 -0.6135,-0.61209c-0.3388,0 -0.6135,0.27404 -0.6135,0.61209c0,0.33804 0.2747,0.61208 0.6135,0.61208z" />
+          <path id="svg_4" fill="#108CB9" d="m21.5165,0.76904l-4.5796,2.55649l-0.1498,-0.26709l4.5797,-2.55649l0.1497,0.26709z" clip-rule="evenodd" fill-rule="evenodd" />
+          <path id="svg_5" fill="#108CB9" d="m16.8615,3.77056c0.3388,0 0.6135,-0.27404 0.6135,-0.61208c0,-0.33805 -0.2747,-0.61209 -0.6135,-0.61209c-0.3388,0 -0.6135,0.27404 -0.6135,0.61209c0,0.33804 0.2747,0.61208 0.6135,0.61208z" />
+          <path id="svg_6" fill="#108CB9" d="m21.3672,39.2306l4.5786,-2.5238l0.1483,0.2679l-4.5786,2.5238l-0.1483,-0.2679z" clip-rule="evenodd" fill-rule="evenodd" />
+          <path id="svg_7" fill="#108CB9" d="m21.4553,40.0001c0.3388,0 0.6135,-0.2741 0.6135,-0.6121c0,-0.3381 -0.2747,-0.6121 -0.6135,-0.6121c-0.3388,0 -0.6135,0.274 -0.6135,0.6121c0,0.338 0.2747,0.6121 0.6135,0.6121z" />
+          <path id="svg_8" fill="#108CB9" d="m26.0197,37.4527c0.3388,0 0.6135,-0.274 0.6135,-0.6121c0,-0.338 -0.2747,-0.6121 -0.6135,-0.6121c-0.3388,0 -0.6135,0.2741 -0.6135,0.6121c0,0.3381 0.2747,0.6121 0.6135,0.6121z" />
+          <path id="svg_9" fill="#108CB9" d="m21.3668,39.4979l-4.5797,-2.5565l0.1498,-0.2671l4.5796,2.5565l-0.1497,0.2671z" clip-rule="evenodd" fill-rule="evenodd" />
+          <path id="svg_10" fill="#108CB9" d="m16.8615,37.4527c0.3388,0 0.6135,-0.274 0.6135,-0.6121c0,-0.338 -0.2747,-0.6121 -0.6135,-0.6121c-0.3388,0 -0.6135,0.2741 -0.6135,0.6121c0,0.3381 0.2747,0.6121 0.6135,0.6121z" />
+          <path id="svg_11" fill="#108CB9" d="m4.53125,10.2267l4.47331,-2.70644l0.15905,0.26169l-4.47331,2.70645l-0.15905,-0.2617z" clip-rule="evenodd" fill-rule="evenodd" />
+          <path id="svg_12" fill="#108CB9" d="m4.59786,10.9451c0.33881,0 0.61348,-0.274 0.61348,-0.6121c0,-0.33801 -0.27467,-0.61205 -0.61348,-0.61205c-0.33882,0 -0.61348,0.27404 -0.61348,0.61205c0,0.3381 0.27466,0.6121 0.61348,0.6121z" />
+          <path id="svg_13" fill="#108CB9" d="m1.06172,8.91925c0.33882,0 0.61349,-0.27405 0.61349,-0.61209c0,-0.33805 -0.27467,-0.61209 -0.61349,-0.61209c-0.33881,0 -0.61348,0.27404 -0.61348,0.61209c0,0.33804 0.27467,0.61209 0.61348,0.61209z" />
+          <path id="svg_14" fill="#108CB9" d="m9.08419,8.26324c0.33881,0 0.61348,-0.27404 0.61348,-0.61209c0,-0.33805 -0.27467,-0.61209 -0.61348,-0.61209c-0.33882,0 -0.61349,0.27404 -0.61349,0.61209c0,0.33805 0.27467,0.61209 0.61349,0.61209z" />
+          <path id="svg_15" fill="#108CB9" d="m4.76446,10.3594l-0.0593,5.2344l-0.30672,-0.0035l0.0593,-5.2343l0.30672,0.0034z" clip-rule="evenodd" fill-rule="evenodd" />
+          <path id="svg_16" fill="#108CB9" d="m4.52266,16.1878c0.33882,0 0.61348,-0.274 0.61348,-0.6121c0,-0.338 -0.27466,-0.6121 -0.61348,-0.6121c-0.33882,0 -0.61348,0.2741 -0.61348,0.6121c0,0.3381 0.27466,0.6121 0.61348,0.6121z" />
+          <path id="svg_17" fill="#108CB9" d="m1.0297,8.12964l3.65738,2.09536l-0.15275,0.2654l-3.65738,-2.09536l0.15275,-0.2654z" clip-rule="evenodd" fill-rule="evenodd" />
+          <path id="svg_18" fill="#108CB9" d="m38.1182,29.6399l0.0879,-5.218l0.3067,0.0051l-0.0879,5.2181l-0.3067,-0.0052z" clip-rule="evenodd" fill-rule="evenodd" />
+          <path id="svg_19" fill="#108CB9" d="m38.299,30.2545c0.3388,0 0.6135,-0.2741 0.6135,-0.6121c0,-0.3381 -0.2747,-0.6121 -0.6135,-0.6121c-0.3388,0 -0.6135,0.274 -0.6135,0.6121c0,0.338 0.2747,0.6121 0.6135,0.6121z" />
+          <path id="svg_20" fill="#108CB9" d="m41.8342,32.2796c0.3388,0 0.6135,-0.274 0.6135,-0.6121c0,-0.338 -0.2747,-0.6121 -0.6135,-0.6121c-0.3388,0 -0.6135,0.2741 -0.6135,0.6121c0,0.3381 0.2747,0.6121 0.6135,0.6121z" />
+          <path id="svg_21" fill="#108CB9" d="m38.3596,25.0364c0.3388,0 0.6135,-0.274 0.6135,-0.6121c0,-0.338 -0.2747,-0.612 -0.6135,-0.612c-0.3388,0 -0.6135,0.274 -0.6135,0.612c0,0.3381 0.2747,0.6121 0.6135,0.6121z" />
+          <path id="svg_22" fill="#108CB9" d="m38.3499,29.7738l-4.5019,2.6891l-0.1576,-0.2626l4.502,-2.6891l0.1575,0.2626z" clip-rule="evenodd" fill-rule="evenodd" />
+          <path id="svg_23" fill="#108CB9" d="m33.7981,32.961c0.3388,0 0.6134,-0.274 0.6134,-0.6121c0,-0.338 -0.2746,-0.6121 -0.6134,-0.6121c-0.3389,0 -0.6135,0.2741 -0.6135,0.6121c0,0.3381 0.2746,0.6121 0.6135,0.6121z" />
+          <path id="svg_24" fill="#108CB9" d="m41.8527,31.8706l-3.6574,-2.0954l0.1528,-0.2654l3.6573,2.0954l-0.1527,0.2654z" clip-rule="evenodd" fill-rule="evenodd" />
+          <path id="svg_25" fill="#108CB9" d="m4.49599,29.7128l-0.10634,-5.2181l0.30668,-0.0062l0.10634,5.2181l-0.30668,0.0062z" clip-rule="evenodd" fill-rule="evenodd" />
+          <path id="svg_26" fill="#108CB9" d="m4.62129,30.3218c0.33882,0 0.61349,-0.274 0.61349,-0.6121c0,-0.338 -0.27467,-0.612 -0.61349,-0.612c-0.33881,0 -0.61348,0.274 -0.61348,0.612c0,0.3381 0.27467,0.6121 0.61348,0.6121z" />
+          <path id="svg_27" fill="#108CB9" d="m1.09395,32.3602c0.33882,0 0.61348,-0.2741 0.61348,-0.6121c0,-0.3381 -0.27466,-0.6121 -0.61348,-0.6121c-0.33882,0 -0.61348,0.274 -0.61348,0.6121c0,0.338 0.27466,0.6121 0.61348,0.6121z" />
+          <path id="svg_28" fill="#108CB9" d="m4.54317,25.1038c0.33882,0 0.61348,-0.274 0.61348,-0.6121c0,-0.338 -0.27466,-0.6121 -0.61348,-0.6121c-0.33882,0 -0.61348,0.2741 -0.61348,0.6121c0,0.3381 0.27466,0.6121 0.61348,0.6121z" />
+          <path id="svg_29" fill="#108CB9" d="m4.72693,29.5781l4.51114,2.6728l-0.15662,0.2632l-4.51114,-2.6728l0.15662,-0.2632z" clip-rule="evenodd" fill-rule="evenodd" />
+          <path id="svg_30" fill="#108CB9" d="m9.13204,33.012c0.33881,0 0.61348,-0.274 0.61348,-0.6121c0,-0.338 -0.27467,-0.6121 -0.61348,-0.6121c-0.33882,0 -0.61349,0.2741 -0.61349,0.6121c0,0.3381 0.27467,0.6121 0.61349,0.6121z" />
+          <path id="svg_31" fill="#108CB9" d="m0.92285,31.686l3.6492,-2.1086l0.15373,0.2648l-3.6492,2.1087l-0.15373,-0.2649z" clip-rule="evenodd" fill-rule="evenodd" />
+          <path id="svg_32" fill="#108CB9" d="m38.1603,10.4326l-4.4826,-2.68912l0.1581,-0.26228l4.4825,2.6891l-0.158,0.2623z" clip-rule="evenodd" fill-rule="evenodd" />
+          <path id="svg_33" fill="#108CB9" d="m38.2531,10.8899c0.3388,0 0.6135,-0.274 0.6135,-0.612c0,-0.33809 -0.2747,-0.61213 -0.6135,-0.61213c-0.3388,0 -0.6135,0.27404 -0.6135,0.61213c0,0.338 0.2747,0.612 0.6135,0.612z" />
+          <path id="svg_34" fill="#108CB9" d="m41.7815,8.85186c0.3388,0 0.6134,-0.27404 0.6134,-0.61209c0,-0.33804 -0.2746,-0.61208 -0.6134,-0.61208c-0.3389,0 -0.6135,0.27404 -0.6135,0.61208c0,0.33805 0.2746,0.61209 0.6135,0.61209z" />
+          <path id="svg_35" fill="#108CB9" d="m33.757,8.22442c0.3389,0 0.6135,-0.27404 0.6135,-0.61209c0,-0.33804 -0.2746,-0.61209 -0.6135,-0.61209c-0.3388,0 -0.6134,0.27405 -0.6134,0.61209c0,0.33805 0.2746,0.61209 0.6134,0.61209z" />
+          <path id="svg_36" fill="#108CB9" d="m38.3926,10.2991l0.0778,5.2354l-0.3068,0.0045l-0.0777,-5.2354l0.3067,-0.0045z" clip-rule="evenodd" fill-rule="evenodd" />
+          <path id="svg_37" fill="#108CB9" d="m38.3459,16.1316c0.3388,0 0.6135,-0.274 0.6135,-0.612c0,-0.3381 -0.2747,-0.6121 -0.6135,-0.6121c-0.3388,0 -0.6135,0.274 -0.6135,0.6121c0,0.338 0.2747,0.612 0.6135,0.612z" />
+          <path id="svg_38" fill="#108CB9" d="m41.9659,8.32615l-3.6491,2.10765l-0.1537,-0.2649l3.6492,-2.10762l0.1536,0.26487z" clip-rule="evenodd" fill-rule="evenodd" />
+          <path id="svg_39" fill="#9589EA" d="m26.0825,11.3073l-4.6594,-2.68401l-4.6594,2.68401l4.6594,2.684l4.6594,-2.684z" />
+          <path id="svg_40" fill="#6559A2" d="m21.4231,19.3594l0,-5.368l-4.6594,-2.684l0,5.368l4.6594,2.684z" />
+          <path id="svg_41" fill="#6559A2" d="m21.4229,19.3594l0,-5.368l4.6594,-2.684l0,5.368l-4.6594,2.684z" />
+          <path id="svg_42" fill="#1C2135" d="m21.4228,8.50586l-4.7617,2.74314l0,5.4854l4.7617,2.7432l4.7616,-2.7432l0,-5.4854l-4.7616,-2.74314zm4.4549,2.80134l-4.4549,2.5667l-4.4549,-2.5657l4.4549,-2.56669l4.4549,2.56669l0,-0.001zm-9.0121,0.1765l4.4549,2.5656l0,5.1324l-4.4549,-2.5667l0,-5.1323l0,0.001zm4.6594,7.698l0,-5.1324l4.4549,-2.5666l0,5.1323l-4.4549,2.5667z" />
+          <path id="svg_43" fill="#6559A2" d="m20.9702,20.2846l-4.6594,-2.684l-4.6594,2.684l4.6594,2.684l4.6594,-2.684z" />
+          <path id="svg_44" fill="#9589EA" d="m16.3108,28.3367l0,-5.368l-4.6594,-2.684l0,5.368l4.6594,2.684z" />
+          <path id="svg_45" fill="#6559A2" d="m16.3105,28.3367l0,-5.368l4.6595,-2.684l0,5.368l-4.6595,2.684z" />
+          <path id="svg_46" fill="#1C2135" d="m16.3105,17.4832l-4.7617,2.7431l0,5.4854l4.7617,2.7431l4.7616,-2.7431l0,-5.4854l-4.7616,-2.7431zm4.4549,2.8013l-4.4549,2.5667l-4.4549,-2.5657l4.4549,-2.5667l4.4549,2.5667l0,-0.001zm-9.0121,0.1765l4.4549,2.5656l0,5.1324l-4.4549,-2.5667l0,-5.1324l0,0.0011zm4.6594,7.698l0,-5.1324l4.4549,-2.5667l0,5.1324l-4.4549,2.5667z" />
+          <path id="svg_47" fill="#6559A2" d="m31.1948,20.2846l-4.6594,-2.684l-4.6594,2.684l4.6594,2.684l4.6594,-2.684z" />
+          <path id="svg_48" fill="#6559A2" d="m26.5354,28.3367l0,-5.368l-4.6594,-2.684l0,5.368l4.6594,2.684z" />
+          <path id="svg_49" fill="#9589EA" d="m26.5352,28.3367l0,-5.368l4.6594,-2.684l0,5.368l-4.6594,2.684z" />
+          <path id="svg_50" fill="#1C2135" d="m26.5361,17.4832l-4.7617,2.7431l0,5.4854l4.7617,2.7431l4.7616,-2.7431l0,-5.4854l-4.7616,-2.7431zm4.4549,2.8013l-4.4549,2.5667l-4.4549,-2.5657l4.4549,-2.5667l4.4549,2.5667l0,-0.001zm-9.0121,0.1765l4.4549,2.5656l0,5.1324l-4.4549,-2.5657l0,-5.1323zm4.6594,7.699l0,-5.1323l4.4549,-2.5667l0,5.1323l-4.4549,2.5667z" />
+          <path id="svg_51" fill="#9589EA" d="m31.1948,14.3676l-4.6594,-2.684l-4.6594,2.684l4.6594,2.684l4.6594,-2.684z" />
+          <path id="svg_52" fill="#6559A2" d="m26.5354,22.4197l0,-5.368l-4.6594,-2.684l0,5.368l4.6594,2.684z" />
+          <path id="svg_53" fill="#9589EA" d="m26.5352,22.4197l0,-5.368l4.6594,-2.684l0,5.368l-4.6594,2.684z" />
+          <path id="svg_54" fill="#1C2135" d="m26.5361,11.5664l-4.7617,2.7432l0,5.4853l4.7617,2.7432l4.7616,-2.7432l0,-5.4853l-4.7616,-2.7432zm4.4549,2.8013l-4.4549,2.5667l-4.4549,-2.5656l4.4549,-2.5667l4.4549,2.5667l0,-0.0011zm-9.0121,0.1765l4.4549,2.5657l0,5.1324l-4.4549,-2.5657l0,-5.1324zm4.6594,7.6991l0,-5.1324l4.4549,-2.5667l0,5.1324l-4.4549,2.5667z" />
+          <path id="svg_55" fill="#9589EA" d="m20.9702,14.3676l-4.6594,-2.684l-4.6594,2.684l4.6594,2.684l4.6594,-2.684z" />
+          <path id="svg_56" fill="#9589EA" d="m16.3108,22.4197l0,-5.368l-4.6594,-2.684l0,5.368l4.6594,2.684z" />
+          <path id="svg_57" fill="#6559A2" d="m16.3105,22.4197l0,-5.368l4.6595,-2.684l0,5.368l-4.6595,2.684z" />
+          <path id="svg_58" fill="#1C2135" d="m16.3105,11.5664l-4.7617,2.7432l0,5.4853l4.7617,2.7432l4.7616,-2.7432l0,-5.4853l-4.7616,-2.7432zm4.4549,2.8013l-4.4549,2.5667l-4.4549,-2.5656l4.4549,-2.5667l4.4549,2.5667l0,-0.0011zm-9.0121,0.1765l4.4549,2.5657l0,5.1324l-4.4549,-2.5667l0,-5.1324l0,0.001zm4.6594,7.6981l0,-5.1324l4.4549,-2.5667l0,5.1324l-4.4549,2.5667z" />
+          <path id="svg_59" fill="#6559A2" d="m26.0825,23.2428l-4.6594,-2.684l-4.6594,2.684l4.6594,2.6841l4.6594,-2.6841z" />
+          <path id="svg_60" fill="#9589EA" d="m21.4231,31.2949l0,-5.368l-4.6594,-2.684l0,5.368l4.6594,2.684z" />
+          <path id="svg_61" fill="#9589EA" d="m21.4229,31.2949l0,-5.368l4.6594,-2.684l0,5.368l-4.6594,2.684z" />
+          <path id="svg_62" fill="#1C2135" d="m21.4228,20.4417l-4.7617,2.7431l0,5.4854l4.7617,2.7431l4.7616,-2.7431l0,-5.4854l-4.7616,-2.7431zm4.4549,2.8013l-4.4549,2.5667l-4.4549,-2.5657l4.4549,-2.5667l4.4549,2.5667l0,-0.001zm-9.0121,0.1765l4.4549,2.5656l0,5.1324l-4.4549,-2.5657l0,-5.1323zm4.6594,7.699l0,-5.1323l4.4549,-2.5667l0,5.1323l-4.4549,2.5667z" />
+          <path id="svg_63" fill="#9589EA" d="m26.0825,17.4282l-4.6594,-2.6841l-4.6594,2.6841l4.6594,2.684l4.6594,-2.684z" />
+          <path id="svg_64" fill="#9589EA" d="m21.4231,25.4803l0,-5.3681l-4.6594,-2.684l0,5.368l4.6594,2.6841z" />
+          <path id="svg_65" fill="#9589EA" d="m21.4229,25.4803l0,-5.3681l4.6594,-2.684l0,5.368l-4.6594,2.6841z" />
+          <path id="svg_66" fill="#1C2135" d="m21.4228,25.5984l-4.7617,-2.7432l0,-5.4853l4.7617,-2.7432l4.7616,2.7432l0,5.4853l-4.7616,2.7432zm-4.5572,-2.8605l4.5572,2.6248l4.5571,-2.6248l0,-5.2507l-4.5571,-2.6248l-4.5572,2.6248l0,5.2497l0,0.001z" />
+          <path id="svg_67" fill="#1C2135" d="m16.8161,17.3423l-0.1022,0.1767l4.6594,2.6841l0.1022,-0.1767l-4.6594,-2.6841z" />
+          <path id="svg_68" fill="#1C2135" d="m26.0349,17.3507l-4.6599,2.6832l0.1022,0.1767l4.6599,-2.6831l-0.1022,-0.1768z" />
+          <path id="svg_69" fill="#1C2135" d="m21.5248,20.1121l-0.2045,0l0,5.368l0.2045,0l0,-5.368z" />
+          <path id="svg_70" fill="#71BEDB" d="m36.2146,11.2636l-14.5681,-8.39177l0,5.30069l9.967,5.74138l4.6011,-2.6503z" />
+          <path id="svg_71" fill="#1C2135" d="m21.851,3.2246l13.9557,8.0388l-4.1922,2.4147l-9.7635,-5.62412l0,-4.82938zm-0.2045,-0.35297l0,5.30068l9.968,5.74139l4.6012,-2.6503l-14.5692,-8.39279l0,0.00102z" />
+          <path id="svg_72" fill="#71BEDB" d="m11.2408,13.93l9.9967,-5.75773l0,-5.30069l-14.59785,8.40802l4.60115,2.6504z" />
+          <path id="svg_73" fill="#1C2135" d="m21.0329,3.22455l0,4.82938l-9.7912,5.64037l-4.19209,-2.4147l13.98329,-8.05505zm0.2045,-0.35297l-14.59678,8.40802l4.60108,2.6504l9.9957,-5.75773l0,-5.30069z" />
+          <path id="svg_74" fill="#71BEDB" d="m31.8096,14.2717l0,11.5073l4.6011,2.6503l0,-16.808l-4.6011,2.6504z" />
+          <path id="svg_75" fill="#1C2135" d="m36.2062,11.9753l0,16.101l-4.1921,-2.4147l0,-11.2716l4.1921,-2.4147zm0.2045,-0.3529l-4.6011,2.6503l0,11.5063l4.6011,2.6503l0,-16.808l0,0.0011z" />
+          <path id="svg_76" fill="#71BEDB" d="m11.0728,14.3044l-4.60112,-2.6503l0,16.7426l4.60112,-2.6503l0,-11.442z" />
+          <path id="svg_77" fill="#1C2135" d="m6.67617,12.007l4.19213,2.4147l0,11.2063l-4.19213,2.4147l0,-16.0357zm-0.20449,-0.3529l0,16.7426l4.60112,-2.6503l0,-11.442l-4.60112,-2.6503z" />
+          <path id="svg_78" fill="#71BEDB" d="m6.68457,28.7456l14.55283,8.3825l0,-5.3007l-9.9517,-5.7322l-4.60113,2.6504z" />
+          <path id="svg_79" fill="#1C2135" d="m11.2857,26.3309l9.7472,5.6149l0,4.8293l-13.93934,-8.0295l4.19214,-2.4147zm0,-0.2357l-4.60113,2.6504l14.55283,8.3825l0,-5.3007l-9.9517,-5.7322z" />
+          <path id="svg_80" fill="#71BEDB" d="m21.6465,31.8275l0,5.3007l14.5242,-8.3663l-4.6011,-2.6503l-9.9231,5.7159z" />
+          <path id="svg_81" fill="#1C2135" d="m31.5696,26.3472l4.1921,2.4147l-13.9117,8.0133l0,-4.8294l9.7196,-5.5986zm0,-0.2356l-9.9241,5.7169l0,5.3007l14.5252,-8.3673l-4.6011,-2.6503z" />
+          <path id="svg_82" fill="#9589EA" d="m26.0825,17.4282l-4.6594,-2.6841l-4.6594,2.6841l4.6594,2.684l4.6594,-2.684z" />
+          <path id="svg_83" fill="#9589EA" d="m21.4231,25.4803l0,-5.3681l-4.6594,-2.684l0,5.368l4.6594,2.6841z" />
+          <path id="svg_84" fill="#9589EA" d="m21.4229,25.4803l0,-5.3681l4.6594,-2.684l0,5.368l-4.6594,2.6841z" />
+          <path id="svg_85" fill="#1C2135" d="m21.4228,14.6267l-4.7617,2.7432l0,5.4853l4.7617,2.7432l4.7616,-2.7432l0,-5.4853l-4.7616,-2.7432zm4.4549,2.8013l-4.4549,2.5667l-4.4549,-2.5656l4.4549,-2.5667l4.4549,2.5667l0,-0.0011zm-9.0121,0.1765l4.4549,2.5657l0,5.1324l-4.4549,-2.5667l0,-5.1324l0,0.001zm4.6594,7.6981l0,-5.1324l4.4549,-2.5667l0,5.1324l-4.4549,2.5667z" />
+        </g>
+      </svg>
+    </span>
+  );
+
+  const iconJotai = () => (
+    <Image src={JotaiIcon} alt="jotai" width="12" height="12" className="w-6 h-6 sm:w-8 sm:h-8" />
+  );
+
+  const techStacks = [
+    { name: "JavaScript", icon: <StackIcon name="js" />, main: true },
+    { name: "TypeScript", icon: <StackIcon name="typescript" />, main: true },
+    { name: "React", icon: <StackIcon name="react" />, main: true },
+    { name: "Next.js", icon: <StackIcon name="nextjs2" />, main: true },
+    { name: "Sass", icon: <StackIcon name="sass" />, main: true },
+    { name: "Ant Design", icon: <StackIcon name="antd" />, main: true },
+    { name: "Tailwind CSS", icon: <StackIcon name="tailwindcss" />, main: true },
+    { name: "Module Federation", icon: iconModuleFederation(), main: true },
+    { name: "Jotai", icon: iconJotai(), main: true },
+    { name: "Vite", icon: <StackIcon name="vitejs" />, main: true },
+    { name: "Webpack", icon: <StackIcon name="webpack" />, main: true },
+    { name: "Git / GitHub", icon: <StackIcon name="git" />, main: true },
+
+    { name: "Vue.js", icon: <StackIcon name="vuejs" />, main: false },
+    { name: "Nuxt.js", icon: <StackIcon name="nuxtjs" />, main: false },
+    { name: "Svelte", icon: <StackIcon name="sveltejs" />, main: false },
+    { name: "Node.js", icon: <StackIcon name="nodejs" />, main: false },
+    { name: "NestJS", icon: <StackIcon name="nestjs" />, main: false },
+    { name: "Express.js", icon: <StackIcon name="expressjs" />, main: false },
+    { name: "PHP", icon: <StackIcon name="php" />, main: false },
+    { name: "Laravel", icon: <StackIcon name="laravel" />, main: false },
+    { name: "Prisma", icon: <StackIcon name="prisma" />, main: false },
+    { name: "PostgreSQL", icon: <StackIcon name="postgresql" />, main: false },
+    { name: "MySQL", icon: <StackIcon name="mysql" />, main: false },
+    { name: "MongoDB", icon: <StackIcon name="mongodb" />, main: false },
+    { name: "Firebase", icon: <StackIcon name="firebase" />, main: false },
+    { name: "Supabase", icon: <StackIcon name="supabase" />, main: false },
+    { name: "Docker", icon: <StackIcon name="docker" />, main: false },
+  ];
+
+  const mainStack = techStacks.filter(s => s.main);
+  const secondaryStack = techStacks.filter(s => !s.main);
+
+  const StackGrid = ({ items, label }: { items: typeof techStacks, label: string }) => (
+    <div className="mb-6 text-center md:text-start">
+      <p className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-4">{label}</p>
+      <div className="flex flex-wrap justify-center md:justify-start gap-3 sm:gap-4">
+        {items.map((stack, index) => (
+          <div
+            key={index}
+            className={`relative group border border-slate-500 bg-white w-12 h-12 sm:w-14 sm:h-14 rounded-xl shadow-sm hover:border-black hover:shadow-[4px_4px_0px_0_rgba(0,0,0,1)] hover:-translate-x-[1px] hover:-translate-y-[1px] transition-all flex items-center justify-center cursor-help`}
+          >
+            <div className="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+              {stack.icon}
+            </div>
+
+            {/* Re-added Tooltip */}
+            <div className="absolute -top-10 left-1/2 -translate-x-1/2 scale-0 group-hover:scale-100 transition-all duration-200 origin-bottom pointer-events-none z-10">
+              <div className="bg-black text-white text-[10px] px-2.5 py-1.5 rounded-lg whitespace-nowrap relative font-bold tracking-wide">
+                {stack.name}
+                <div className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[4px] border-t-black"></div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 
   return (
     <div
@@ -19,13 +180,17 @@ export default function About() {
         <Image src={Wave1} alt="wave" className="w-full h-full object-cover" />
       </div>
       <div className="lg:w-9/12 md:w-10/12 w-11/12 mx-auto">
-        <div className="flex flex-col-reverse lg:flex-row md:text-start text-center items-center gap-3 md:gap-14">
+        <div className="flex flex-col-reverse lg:flex-row md:text-start text-center items-center gap-6 md:gap-4 xl:gap-8">
           <div>
-            <p>
-              I am an experienced front-end web developer with over five years experience in creating dynamic and visually appealing web applications. I started out in freelance software development during my university years and later formalised my expertise by earning a Bachelor`s degree in Informatics Engineering from STMIK Bani Saleh. Since then, I have been dedicated to advancing my career as a front-end web developer and have thrived in collaborative efforts with cross-functional teams from the technology, business and design sectors.
+            <p className="mb-2">
+              I am a frontend web developer with over six years of experience contributing to and leading frontend development in production web applications. I started my career through freelance projects during my university years and later earned a Bachelor`s degree in Informatics Engineering from STMIK Bani Saleh. Throughout my professional journey, I have worked closely with cross-functional teams, contributed to technical decision-making, and supported team growth by maintaining code quality and sustainable frontend practices.
             </p>
+            <div className="mt-4 mb-2">
+              <StackGrid items={mainStack} label="Primary Stack" />
+              <StackGrid items={secondaryStack} label="Also Familiar With" />
+            </div>
             <button
-              className="bg-brand-blue-pastel px-8 py-3 mt-5 rounded-full border border-black shadow-[1.8px_2px_0px_0_rgba(0,0,0)] text-lg font-semibold hover:ease-out hover:duration-500 hover:translate-y-1"
+              className="bg-brand-blue-pastel px-8 py-3 mt-2 rounded-full border border-black shadow-[1.8px_2px_0px_0_rgba(0,0,0)] text-lg font-semibold hover:ease-out hover:duration-500 hover:translate-y-1"
               onClick={() => handleMenuClick(contactRef?.current)}
             >
               Let&apos;s Collab 🚀
