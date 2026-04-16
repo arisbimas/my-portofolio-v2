@@ -12,7 +12,7 @@ export default function Contact() {
       <div className="flex flex-col items-center py-10">
         <div className="mb-8">
           <p className="text-center">Get in touch with me</p>
-          <hr className="w-[200px] m-auto bg-brand-blue-pastel  border-black shadow-[1.8px_1px_0px_0_rgba(0,0,0)]" />
+          <hr className="w-[200px] m-auto bg-brand-blue-pastel border-2 border-black shadow-[4px_4px_0px_0_rgba(0,0,0,1)] rounded-md" />
         </div>
         <div className="flex gap-5 md:gap-10">
           <LinkContact
@@ -46,9 +46,8 @@ interface LinkContactProps {
 const LinkContact = (props: LinkContactProps) => {
   return (
     <Link href={props.href} target="_blank">
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center border-2 border-black rounded-md p-3 bg-white shadow-[4px_4px_0px_0_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all duration-200">
         {props.icon}
-        {/* {props.text} */}
       </div>
     </Link>
   );

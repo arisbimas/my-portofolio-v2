@@ -14,12 +14,12 @@ export default function Project() {
 
   return (
     <div
-      className="section-project bg-white min-h-screen pb-10"
+      className="section-project bg-white min-h-screen py-10"
       ref={projectRef}
     >
       <div className="mb-8">
         <p className="flex justify-center">My Recent Project</p>
-        <hr className="w-[200px] m-auto bg-brand-blue-pastel  border-black shadow-[1.8px_1px_0px_0_rgba(0,0,0)]" />
+        <hr className="w-[200px] m-auto bg-brand-blue-pastel border-2 border-black shadow-[4px_4px_0px_0_rgba(0,0,0,1)] rounded-md" />
       </div>
       <div className="lg:w-9/12 md:w-10/12 w-11/12 mx-auto ">
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 mt-16 text-white">

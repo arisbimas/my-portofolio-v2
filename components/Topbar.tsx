@@ -5,7 +5,7 @@ import Image from "next/image";
 import MenuContext from "@/context/MenuContext";
 
 const anchorStyle =
-  "px-1 md:px-3 py-1 border border-brand-cream-pastel rounded-md text-sm md:text-lg font-semibold md:font-medium cursor-pointer hover:bg-brand-pink-pastel hover:border-black hover:shadow-[1.8px_2px_0px_0_rgba(0,0,0)] hover:ease-out hover:duration-500 hover:translate-y-1";
+  "px-2 md:px-4 py-1 border-2 border-black rounded-md text-sm md:text-lg font-medium cursor-pointer bg-brand-whitist-pastel text-black shadow-[4px_4px_0px_0_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all duration-200";
 
 interface TopBarProps {
   handleMenuClick: (index: number) => void;
@@ -23,40 +23,27 @@ export const TopBar: React.FC<TopBarProps> = ({ handleMenuClick }) => {
     <header className="bg-brand-cream-pastel mx-auto h-24 w-full top-0 z-50 fixed flex items-center justify-center">
       <nav className="lg:w-9/12 w-12/12 flex gap-4 justify-between mx-auto">
         <div
-          className="logo"
+          className="logo cursor-pointer"
           onClick={() => handleMenuClick(menuRef?.homeRef?.current)}
         >
           <Image src={Logo} alt="logo" unoptimized={true} />
         </div>
         <div className="flex gap-x-1 md:gap-x-6 items-center text-zinc-700">
+          <a className={anchorStyle} onClick={() => handleMenuClick(menuRef?.aboutRef?.current)}>About</a>
           <a
-            // key={item.name}
-            // href={item.href}
-            className={anchorStyle}
-            onClick={() => handleMenuClick(menuRef?.aboutRef?.current)}
-          >
-            About
-          </a>
-          <a
-            // key={item.name}
-            // href={item.href}
             className={anchorStyle}
             onClick={() => handleMenuClick(menuRef?.projectRef?.current)}
           >
             My Works
           </a>
           <a
-            // key={item.name}
-            // href={item.href}
             className={anchorStyle}
             onClick={() => handleMenuClick(menuRef?.contactRef?.current)}
           >
             Contact
           </a>
           <a
-            // key={item.name}
-            // href={item.href}
-            className={"flex gap-1 items-center px-3 py-1 border rounded-md text-sm md:text-lg font-semibold md:font-medium cursor-pointer bg-[#F8CB46] border-black shadow-[1.8px_2px_0px_0_rgba(0,0,0)] hover:ease-out hover:duration-500 hover:translate-y-1"}
+            className={"flex gap-1 items-center px-3 py-1 border-2 border-black rounded-md text-sm md:text-lg font-medium cursor-pointer bg-brand-yellow-pastel text-black shadow-[4px_4px_0px_0_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all duration-200"}
             onClick={handleDownloadCV}
           >
             Download CV

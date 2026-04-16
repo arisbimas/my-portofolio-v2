@@ -152,7 +152,7 @@ export default function About() {
         {items.map((stack, index) => (
           <div
             key={index}
-            className={`relative group border border-slate-500 bg-white w-12 h-12 sm:w-14 sm:h-14 rounded-xl shadow-sm hover:border-black hover:shadow-[4px_4px_0px_0_rgba(0,0,0,1)] hover:-translate-x-[1px] hover:-translate-y-[1px] transition-all flex items-center justify-center cursor-help`}
+            className={`relative group border-2 border-black bg-white w-12 h-12 sm:w-14 sm:h-14 rounded-md shadow-[3px_3px_0px_0_rgba(0,0,0,1)] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none transition-all duration-200 flex items-center justify-center cursor-help`}
           >
             <div className="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
               {stack.icon}
@@ -173,7 +173,7 @@ export default function About() {
 
   return (
     <div
-      className="section-about min-h-screen bg-white pb-10 lg:pb-0"
+      className="section-about min-h-screen pb-10 lg:pb-0"
       ref={aboutRef}
     >
       <div className="top-[-1px] relative" ref={aboutRef}>
@@ -190,7 +190,7 @@ export default function About() {
               <StackGrid items={secondaryStack} label="Also Familiar With" />
             </div>
             <button
-              className="bg-brand-blue-pastel px-8 py-3 mt-2 rounded-full border border-black shadow-[1.8px_2px_0px_0_rgba(0,0,0)] text-lg font-semibold hover:ease-out hover:duration-500 hover:translate-y-1"
+              className="bg-brand-blue-pastel px-8 py-3 mt-2 rounded-md border-2 border-black shadow-[4px_4px_0px_0_rgba(0,0,0,1)] text-lg font-bold hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all duration-200"
               onClick={() => handleMenuClick(contactRef?.current)}
             >
               Let&apos;s Collab 🚀

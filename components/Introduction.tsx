@@ -36,7 +36,7 @@ export default function Introduction() {
           </p>
           <div>
             <button
-              className="bg-brand-red-pastel px-9 py-3 rounded-full border border-black shadow-[1.8px_2px_0px_0_rgba(0,0,0)] text-lg font-semibold hover:ease-out hover:duration-500 hover:translate-y-1"
+              className="bg-brand-red-pastel px-9 py-3 rounded-md border-2 border-black shadow-[4px_4px_0px_0_rgba(0,0,0,1)] text-lg font-bold hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all duration-200"
               onClick={() => handleMenuClick(projectRef?.current)}
             >
               My Project 🙌
