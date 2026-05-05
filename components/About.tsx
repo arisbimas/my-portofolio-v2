@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useContext } from "react";
+import { motion, useReducedMotion, type Variants } from "framer-motion";
 import Wave1 from "@/assets/images/wave-1.svg";
 import Avatar2 from "@/assets/images/avatar-7.png";
 import JotaiIcon from "@/assets/images/jotai-icon.png";
@@ -11,6 +12,54 @@ import StackIcon from "tech-stack-icons";
 export default function About() {
   const { aboutRef, contactRef } = useContext(MenuContext);
   const { handleMenuClick } = useTopBarHook();
+  const shouldReduceMotion = useReducedMotion();
+
+  const contentVariants: Variants = {
+    hidden: { opacity: 0, y: shouldReduceMotion ? 0 : 32 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.7,
+        ease: "easeOut",
+        staggerChildren: shouldReduceMotion ? 0 : 0.12,
+        delayChildren: shouldReduceMotion ? 0 : 0.08,
+      },
+    },
+  };
+
+  const itemVariants: Variants = {
+    hidden: { opacity: 0, y: shouldReduceMotion ? 0 : 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.55, ease: "easeOut" },
+    },
+  };
+
+  const stackListVariants: Variants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: shouldReduceMotion ? 0 : 0.04,
+        delayChildren: shouldReduceMotion ? 0 : 0.08,
+      },
+    },
+  };
+
+  const stackItemVariants: Variants = {
+    hidden: {
+      opacity: 0,
+      y: shouldReduceMotion ? 0 : 14,
+      scale: shouldReduceMotion ? 1 : 0.92,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: { duration: 0.35, ease: "easeOut" },
+    },
+  };
 
   const iconModuleFederation: any = () => (
     <span>
@@ -147,12 +196,19 @@ export default function About() {
   const secondaryStack = techStacks.filter(s => !s.main);
 
   const StackGrid = ({ items, label }: { items: typeof techStacks, label: string }) => (
-    <div className="mb-6 text-center lg:text-start">
+    <motion.div variants={itemVariants} className="mb-6 text-center lg:text-start">
       <p className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-4">{label}</p>
-      <div className="flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4">
+      <motion.div
+        variants={stackListVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        className="flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4"
+      >
         {items.map((stack, index) => (
-          <div
+          <motion.div
             key={index}
+            variants={stackItemVariants}
             className={`relative group border-2 border-black bg-white w-12 h-12 sm:w-14 sm:h-14 rounded-md shadow-[3px_3px_0px_0_rgba(0,0,0,1)] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none transition-all duration-200 flex items-center justify-center cursor-help`}
           >
             <div className="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
@@ -166,10 +222,10 @@ export default function About() {
                 <div className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[4px] border-t-black"></div>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 
   return (
@@ -180,24 +236,40 @@ export default function About() {
       <div className="top-[-1px] relative">
         <Image src={Wave1} alt="wave" className="w-full h-full object-cover" />
       </div>
-      <div className="lg:w-9/12 md:w-10/12 w-11/12 mx-auto">
+      <div className="lg:w-9/12 md:w-10/12 w-11/12 mx-auto py-4">
         <div className="flex flex-col-reverse lg:grid grid-cols-1 lg:grid-cols-3 gap-4">
-          <div className="text-center lg:text-start col-span-3 md:col-span-2">
-            <p className="my-2 text-lg text-center lg:text-start">
+          <motion.div
+            variants={contentVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            className="text-center lg:text-start col-span-3 md:col-span-2"
+          >
+            <motion.p variants={itemVariants} className="my-2 text-lg text-center lg:text-start">
               I am a frontend web developer with over six years of experience contributing to and leading frontend development in production web applications. I started my career through freelance projects during my university years and later earned a Bachelor`s degree in Informatics Engineering from STMIK Bani Saleh. Throughout my professional journey, I have worked closely with cross-functional teams, contributed to technical decision-making, and supported team growth by maintaining code quality and sustainable frontend practices.
-            </p>
-            <div className="mt-4 mb-2">
+            </motion.p>
+            <motion.div variants={itemVariants} className="mt-4 mb-2">
               <StackGrid items={mainStack} label="Primary Stack" />
               <StackGrid items={secondaryStack} label="Also Familiar With" />
-            </div>
-            <button
+            </motion.div>
+            <motion.button
+              variants={itemVariants}
+              whileHover={shouldReduceMotion ? undefined : { y: -2, x: 2 }}
+              whileTap={shouldReduceMotion ? undefined : { scale: 0.98 }}
               className="bg-brand-blue-pastel px-8 py-3 mt-2 rounded-md border-2 border-black shadow-[4px_4px_0px_0_rgba(0,0,0,1)] text-lg font-bold hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all duration-200"
               onClick={() => handleMenuClick(contactRef?.current)}
             >
               Let&apos;s Collab 🚀
-            </button>
-          </div>
-          <div className="content-start xl:content-around mx-auto mb-6 md:mb-0 hover:ease-out hover:duration-500 hover:translate-y-1">
+            </motion.button>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: shouldReduceMotion ? 0 : 32, rotate: shouldReduceMotion ? 0 : 2 }}
+            whileInView={{ opacity: 1, x: 0, rotate: 0 }}
+            viewport={{ once: true, amount: 0.25 }}
+            transition={{ duration: 0.7, ease: "easeOut", delay: shouldReduceMotion ? 0 : 0.12 }}
+            whileHover={shouldReduceMotion ? undefined : { y: 4 }}
+            className="content-start xl:content-around mx-auto mb-6 md:mb-0 hover:ease-out hover:duration-500 hover:translate-y-1"
+          >
             <Image
               src={Avatar2}
               alt="avatar"
@@ -205,7 +277,7 @@ export default function About() {
             // width={300}
             // height={300}
             />
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
