@@ -147,9 +147,9 @@ export default function About() {
   const secondaryStack = techStacks.filter(s => !s.main);
 
   const StackGrid = ({ items, label }: { items: typeof techStacks, label: string }) => (
-    <div className="mb-6 text-center md:text-start">
+    <div className="mb-6 text-center lg:text-start">
       <p className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-4">{label}</p>
-      <div className="flex flex-wrap justify-center md:justify-start gap-3 sm:gap-4">
+      <div className="flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4">
         {items.map((stack, index) => (
           <div
             key={index}
@@ -174,16 +174,16 @@ export default function About() {
 
   return (
     <div
-      className="section-about min-h-screen pb-10 lg:pb-0"
+      className="section-about min-h-screen pb-10 lg:pb-0 bg-white"
       ref={aboutRef}
     >
       <div className="top-[-1px] relative">
         <Image src={Wave1} alt="wave" className="w-full h-full object-cover" />
       </div>
       <div className="lg:w-9/12 md:w-10/12 w-11/12 mx-auto">
-        <div className="flex flex-col-reverse lg:flex-row md:text-start text-center items-center gap-6 md:gap-4 xl:gap-8">
-          <div>
-            <p className="mb-2">
+        <div className="flex flex-col-reverse lg:grid grid-cols-1 lg:grid-cols-3 gap-4">
+          <div className="text-center lg:text-start col-span-3 md:col-span-2">
+            <p className="my-2 text-lg text-center lg:text-start">
               I am a frontend web developer with over six years of experience contributing to and leading frontend development in production web applications. I started my career through freelance projects during my university years and later earned a Bachelor`s degree in Informatics Engineering from STMIK Bani Saleh. Throughout my professional journey, I have worked closely with cross-functional teams, contributed to technical decision-making, and supported team growth by maintaining code quality and sustainable frontend practices.
             </p>
             <div className="mt-4 mb-2">
@@ -197,11 +197,11 @@ export default function About() {
               Let&apos;s Collab 🚀
             </button>
           </div>
-          <div className="mx-auto mb-6 md:mb-0 hover:ease-out hover:duration-500 hover:translate-y-1">
+          <div className="content-start xl:content-around mx-auto mb-6 md:mb-0 hover:ease-out hover:duration-500 hover:translate-y-1">
             <Image
               src={Avatar2}
               alt="avatar"
-              className="w-full h-auto object-contain"
+              className="w-full h-auto object-contain "
             // width={300}
             // height={300}
             />

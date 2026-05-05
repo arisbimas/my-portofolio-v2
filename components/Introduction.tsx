@@ -11,7 +11,7 @@ export default function Introduction() {
 
   return (
     <div
-      className="section-home min-h-screen lg:w-9/12 md:w-10/12 w-11/12 pt-4 m-auto"
+      className="section-home lg:w-9/12 md:w-10/12 w-11/12 py-4 m-auto"
       ref={homeRef}
     >
       <div className="flex flex-col-reverse lg:flex-row items-start justify-start text-start lg:text-start ">

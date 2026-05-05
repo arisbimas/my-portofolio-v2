@@ -22,7 +22,7 @@ export default function Project() {
         <hr className="w-[200px] m-auto bg-brand-blue-pastel border-2 border-black shadow-[4px_4px_0px_0_rgba(0,0,0,1)] rounded-md" />
       </div>
       <div className="lg:w-9/12 md:w-10/12 w-11/12 mx-auto ">
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 mt-16 text-white">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-2 lg:gap-4 xl:gap-8 mt-16 text-white">
           <CardProject
             className="bg-brand-blue-pastel"
             title="Workflow Management System Web Application"
