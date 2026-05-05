@@ -125,6 +125,7 @@ export default function About() {
     { name: "Webpack", icon: <StackIcon name="webpack" />, main: true },
     { name: "Git / GitHub", icon: <StackIcon name="git" />, main: true },
 
+    { name: "Jest", icon: <StackIcon name="jest" />, main: false },
     { name: "Vue.js", icon: <StackIcon name="vuejs" />, main: false },
     { name: "Nuxt.js", icon: <StackIcon name="nuxtjs" />, main: false },
     { name: "Svelte", icon: <StackIcon name="sveltejs" />, main: false },
