@@ -1,8 +1,5 @@
-import Image from "next/image";
-
 import Introduction from "@/components/Introduction";
 import About from "@/components/About";
-import React, { ReactNode } from "react";
 import Project from "@/components/Project";
 import Contact from "@/components/Contact";
 import AnimatedSection from "@/components/AnimatedSection";

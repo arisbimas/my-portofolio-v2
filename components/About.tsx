@@ -177,7 +177,7 @@ export default function About() {
       className="section-about min-h-screen pb-10 lg:pb-0"
       ref={aboutRef}
     >
-      <div className="top-[-1px] relative" ref={aboutRef}>
+      <div className="top-[-1px] relative">
         <Image src={Wave1} alt="wave" className="w-full h-full object-cover" />
       </div>
       <div className="lg:w-9/12 md:w-10/12 w-11/12 mx-auto">

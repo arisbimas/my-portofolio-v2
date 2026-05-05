@@ -11,13 +11,13 @@ export default function AnimatedSection({
   delay?: number;
 }) {
   return (
-    <motion.section
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.1 }}
-      transition={{ duration: 0.6, delay: delay, ease: "easeOut" }}
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true, amount: 0.05 }}
+      transition={{ duration: 0.7, delay: delay, ease: "easeOut" }}
     >
       {children}
-    </motion.section>
+    </motion.div>
   );
 }

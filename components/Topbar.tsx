@@ -25,8 +25,10 @@ export const TopBar: React.FC<TopBarProps> = ({ handleMenuClick }) => {
   };
 
   const onMenuClick = (ref: any) => {
-    handleMenuClick(ref);
     setIsMobileMenuOpen(false);
+    requestAnimationFrame(() => {
+      handleMenuClick(ref);
+    });
   };
 
   return (
