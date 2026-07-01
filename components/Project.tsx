@@ -49,6 +49,19 @@ export default function Project() {
 
   const projects = [
     {
+      className: "bg-brand-yellow-pastel",
+      title: "StockFlow – Inventory & Transaction Management System",
+      client: "Personal SaaS Project",
+      stack: [
+        "Next.js",
+        "TypeScript",
+        "Supabase",
+        "Tailwind CSS",
+        "shadcn/ui",
+      ],
+      link: "http://stockflow-dev.vercel.app/",
+    },
+    {
       className: "bg-brand-blue-pastel",
       title: "Workflow Management System Web Application",
       client: "Produk untuk perusahaan IT Consultant",
